@@ -10,7 +10,8 @@ html {
 
 .page {
   inline-size: 1200px;
-  block-size: 100%;
+  width: 100%;
+  height: 100%;
   margin: auto;
   color: #fff;
   font-family: 'Fira Sans Condensed', sans-serif;
@@ -143,7 +144,6 @@ ol {
 .search-form__checkbox {
   width: 19px;
   height: 19px;
-  gap: 0px;
   background-color: transparent;
   border: 1px solid #FFFFFF;
 }
@@ -161,7 +161,7 @@ ol {
   display: flex;
   width: 15px;
   height: 15px;
-  background-color: none;
+  background-color: transparent;
 }
 
 .search-form__pseudo-checkbox:active:before {
@@ -172,12 +172,11 @@ ol {
   background-color: #fff;
 }
 
-
 .search-form__submit-button{
   top: 20px;
   left: 517px;
   gap: 10px;
-  border: 1px 0px 0px 0px;
+  border: 1px 0 0 0;
   border: 1px solid #FFFFFF;
   background-color: inherit;
   color: #fff;
@@ -195,6 +194,8 @@ ol {
   block-size: 1px;
   overflow: hidden;
   white-space: nowrap;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
 }
 
 .search-form__checkbox-list {
@@ -315,3 +316,19 @@ ol {
 .content__list-item:hover {
   text-decoration: underline;
 }
+
+.content__card-link:focus {
+  outline: none;
+}
+
+.content__card-link:focus-visible {
+  outline: 1px solid #fff;
+}
+
+
+
+
+
+
+
+
